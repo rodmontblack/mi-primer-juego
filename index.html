@@ -8,10 +8,17 @@
             left: 0;
             height: 60px;
             width: 60px;
-            z-index: 3; /* Asegura que los personajes estén por encima de las líneas de la pista y la línea de meta */
+            z-index: 4; /* Asegura que los personajes estén por encima de las líneas de la pista y la línea de meta */
 
         }
 
+                        .character-name {
+            position: absolute;
+            left: 70px;  /* Ajusta esto para mover el nombre del personaje hacia la derecha */
+            font-size: 60px;  /* Ajusta esto para cambiar el tamaño del texto */
+            color: rgb(218, 218, 218);  /* Ajusta esto para cambiar el color del texto */
+            z-index: 3; /* Asegura que los nombres de los personajes estén por encima de todo lo demás */
+                                }
         .track {
             position: absolute;
             left: 0;
@@ -22,7 +29,7 @@
 
         .finish-line {
             position: absolute;
-            right: 65px;
+            right: 100px;
             width: 35px;
             height: 970px;
             background: linear-gradient(
@@ -147,21 +154,37 @@
     <div class="race-track">
           <!--PASO 4 PERSONAJES 1X1-->
         <img class="character" id="character1" src="character1.png" style="top:10px"/>
-        <img class="character" id="character2" src="character2.png" style="top:70px"/>
+        <span class="character-name" id="character-name1" style="top:5px">BLANCANIEVES</span>
+        <img class="character" id="character2" src="character2.png" style="top:70px"/> 
+        <span class="character-name" id="character-name2" style="top:65px">CENICIENTA</span>
         <img class="character" id="character3" src="character3.png" style="top:130px"/>
-        <img class="character" id="character4" src="character4.png" style="top:190px"/>
+        <span class="character-name" id="character-name3" style="top:125px">RAPUNZEL</span> 
+        <img class="character" id="character4" src="character4.png" style="top:190px"/> 
+        <span class="character-name" id="character-name4" style="top:185px">MOANA</span> 
         <img class="character" id="character5" src="character5.png" style="top:250px"/>
+        <span class="character-name" id="character-name5" style="top:245px">ARIEL</span> 
         <img class="character" id="character6" src="character6.png" style="top:310px"/>
-        <img class="character" id="character7" src="character7.png" style="top:370px"/>
-        <img class="character" id="character8" src="character8.png" style="top:430px"/>
-        <img class="character" id="character9" src="character9.png" style="top:490px"/>
+        <span class="character-name" id="character-name6" style="top:305px">POCAHONTAS</span> 
+        <img class="character" id="character7" src="character7.png" style="top:370px"/> 
+        <span class="character-name" id="character-name7" style="top:365px">ELSA</span> 
+        <img class="character" id="character8" src="character8.png" style="top:430px"/> 
+        <span class="character-name" id="character-name8" style="top:425px">JAZMIN</span> 
+        <img class="character" id="character9" src="character9.png" style="top:490px"/> 
+        <span class="character-name" id="character-name9" style="top:485px">MULAN</span> 
         <img class="character" id="character10" src="character10.png" style="top:550px"/>
+        <span class="character-name" id="character-name10" style="top:545px">MERIDA</span> 
         <img class="character" id="character11" src="character11.png" style="top:610px"/>
+        <span class="character-name" id="character-name11" style="top:605px">ANNA</span>  
         <img class="character" id="character12" src="character12.png" style="top:670px"/>
-        <img class="character" id="character13" src="character13.png" style="top:730px"/>
-        <img class="character" id="character14" src="character14.png" style="top:790px"/>
+        <span class="character-name" id="character-name12" style="top:665px">MIRABEL</span> 
+        <img class="character" id="character13" src="character13.png" style="top:730px"/> 
+        <span class="character-name" id="character-name13" style="top:725px">TIANA</span> 
+        <img class="character" id="character14" src="character14.png" style="top:790px"/> 
+        <span class="character-name" id="character-name14" style="top:785px">SOFIA</span> 
         <img class="character" id="character15" src="character15.png" style="top:850px"/>
+        <span class="character-name" id="character-name6" style="top:845px">BELLA</span> 
         <img class="character" id="character16" src="character16.png" style="top:910px"/>
+        <span class="character-name" id="character-name16" style="top:905px">AURORA</span>
         <!--PASO 2 LINEAS DE CARRERA-->
         
         <div class="track" style="top:0px"></div>   
