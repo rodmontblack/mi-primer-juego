@@ -107,24 +107,31 @@
      
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-            $(document).ready(function() {
-                // Aquí cambiamos la función de escucha a un click en el botón
-                $("#start-button").click(function() {
-                    for(let i = 1; i <= 21; i++) {
-                        let speed = Math.random() * (20 - 15) + 10;  // Genera una velocidad aleatoria entre 10 y 20
-                        let $character = $(`#character${i}`);
-                        $character.animate({
-                            left: "97%"
-                        }, speed * 1000);
+<script>
+    $(document).ready(function() {
+        let raceOver = false;  // Nueva variable para seguir si la carrera ha terminado o no.
+
+        $("#start-button").click(function() {
+            for(let i = 1; i <= 21; i++) {
+                let speed = Math.random() * (20 - 15) + 10;  // Genera una velocidad aleatoria entre 10 y 20
+                let $character = $(`#character${i}`);
+                $character.animate({
+                    left: "97%"
+                }, speed * 1000, function() {
+                    if(!raceOver) {  // Comprueba si la carrera ha terminado.
+                        $(`#character-name${i}`).css('color', 'red');  // Cambia el color del nombre del personaje a rojo.
+                        raceOver = true;  // Indica que la carrera ha terminado.
                     }
                 });
-            // Reinicio del juego
-            $("#reset-button").click(function() {
-                location.reload();
-            });
-            });
-    </script>
+            }
+        });
+
+        // Reinicio del juego
+        $("#reset-button").click(function() {
+            location.reload();
+        });
+    });
+</script>
 </head>
 <body>
       <!--PASO 1 TITULO-->       
